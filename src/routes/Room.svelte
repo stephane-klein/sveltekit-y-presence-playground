@@ -14,18 +14,13 @@
             });
         });
         awareness.on("change", () => {
-            users = Array.from(awareness.getStates().values()).map((element) => {
-                return {
-                    name: element.name,
-                    color: element.color,
-                    x: element?.cursor?.x,
-                    y: element?.cursor?.y
-                };
-            });
+            users = awareness.getStates().entries();
         });
     });
 </script>
 
-{#each users as user}
-    <Cursor name={user.name} color={user.color} x={user.x} y={user.y} />
+{#each users as [clientID, user]}
+    {#if clientID != awareness?.clientID}
+        <Cursor name={user.name} color={user.color} x={user?.cursor?.x} y={user?.cursor?.y} />
+    {/if}
 {/each}
