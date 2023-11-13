@@ -18,7 +18,7 @@
         <div
             style={`backgroundColor: ${color}; borderRadius: 4; position: absolute; top: 20px; left: 10px; padding: 5px 10px`}
         >
-            <p style="whiteSpace: nowrap; fontSize: 13; color: white;">
+            <p style="whiteSpace: nowrap; fontSize: 13; color: black;">
                 {name}
             </p>
         </div>
