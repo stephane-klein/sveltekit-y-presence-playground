@@ -4,6 +4,8 @@ This playground contains an implementation of [SvelteKit](https://kit.svelte.dev
 
 Issue context (in french): https://github.com/stephane-klein/backlog/issues/338
 
+Demo screencast (in french): https://youtu.be/QI8jFuiWFaE
+
 ## Getting started
 
 ```sh
