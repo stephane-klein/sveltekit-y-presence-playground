@@ -13,7 +13,7 @@
                 y: e.clientY
             });
         });
-        awareness.on("change", (changes) => {
+        awareness.on("change", () => {
             users = Array.from(awareness.getStates().values()).map((element) => {
                 return {
                     name: element.name,
