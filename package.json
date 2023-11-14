@@ -24,7 +24,7 @@
         "prettier": "3.0.3",
         "prettier-plugin-svelte": "3.1.0",
         "svelt-yjs": "1.1.0",
-        "y-webrtc": "10.2.5",
+        "y-webrtc": "https://github.com/stephane-klein/y-webrtc/archive/refs/heads/upgrade-yjs-ws-y-protocols-packages.tar.gz",
         "yargs": "17.7.2",
         "yjs": "13.6.8",
         "concurrently": "8.2.2"

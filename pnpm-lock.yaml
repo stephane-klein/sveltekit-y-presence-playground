@@ -56,8 +56,8 @@ devDependencies:
     specifier: 1.1.0
     version: 1.1.0
   y-webrtc:
-    specifier: 10.2.5
-    version: 10.2.5(yjs@13.6.8)
+    specifier: https://github.com/stephane-klein/y-webrtc/archive/refs/heads/upgrade-yjs-ws-y-protocols-packages.tar.gz
+    version: '@github.com/stephane-klein/y-webrtc/archive/refs/heads/upgrade-yjs-ws-y-protocols-packages.tar.gz(yjs@13.6.8)'
   yargs:
     specifier: 17.7.2
     version: 17.7.2
@@ -2893,13 +2893,13 @@ packages:
   /wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
-  /ws@7.5.9:
-    resolution: {integrity: sha512-F+P9Jil7UiSKSkppIiD94dN07AwvFixvLIj1Og1Rl9GGMuNipJnV9JzjD6XuqmAeiswGvUmNLjr5cFuXwNS77Q==}
-    engines: {node: '>=8.3.0'}
+  /ws@8.14.2:
+    resolution: {integrity: sha512-wEBG1ftX4jcglPxgFCMJmZ2PLtSbJ2Peg6TmpJFTbe9GZYOQCDPdMYu/Tm0/bGZkw8paZnJY45J4K2PZrLYq8g==}
+    engines: {node: '>=10.0.0'}
     requiresBuild: true
     peerDependencies:
       bufferutil: ^4.0.1
-      utf-8-validate: ^5.0.2
+      utf-8-validate: '>=5.0.2'
     peerDependenciesMeta:
       bufferutil:
         optional: true
@@ -2916,23 +2916,6 @@ packages:
     dependencies:
       lib0: 0.2.87
       yjs: 13.6.8
-    dev: true
-
-  /y-webrtc@10.2.5(yjs@13.6.8):
-    resolution: {integrity: sha512-ZyBNvTI5L28sQ2PQI0T/JvyWgvuTq05L21vGkIlcvNLNSJqAaLCBJRe3FHEqXoaogqWmRcEAKGfII4ErNXMnNw==}
-    engines: {node: '>=12'}
-    hasBin: true
-    dependencies:
-      lib0: 0.2.87
-      simple-peer: 9.11.1
-      y-protocols: 1.0.6(yjs@13.6.8)
-    optionalDependencies:
-      ws: 7.5.9
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-      - yjs
     dev: true
 
   /y18n@5.0.8:
@@ -2977,4 +2960,26 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: true
+
+  '@github.com/stephane-klein/y-webrtc/archive/refs/heads/upgrade-yjs-ws-y-protocols-packages.tar.gz(yjs@13.6.8)':
+    resolution: {tarball: https://github.com/stephane-klein/y-webrtc/archive/refs/heads/upgrade-yjs-ws-y-protocols-packages.tar.gz}
+    id: '@github.com/stephane-klein/y-webrtc/archive/refs/heads/upgrade-yjs-ws-y-protocols-packages.tar.gz'
+    name: y-webrtc
+    version: 10.2.5
+    engines: {node: '>=12'}
+    hasBin: true
+    peerDependencies:
+      yjs: ^13.6.8
+    dependencies:
+      lib0: 0.2.87
+      simple-peer: 9.11.1
+      y-protocols: 1.0.6(yjs@13.6.8)
+      yjs: 13.6.8
+    optionalDependencies:
+      ws: 8.14.2
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
     dev: true
